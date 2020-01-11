@@ -1,3 +1,5 @@
+// Heading 1
+
 const h1 = document.createElement("h1");
 const firstHeading = document.createTextNode("Students");
 h1.appendChild(firstHeading);
@@ -5,6 +7,8 @@ h1.appendChild(firstHeading);
 const container = document.getElementById("container");
 container.appendChild(h1);
 
+
+// Subheading
 const subHeading = document.createElement("p");
 const subheadingText = document
     .createTextNode("The table of students can be found below.");
@@ -12,22 +16,37 @@ subHeading.appendChild(subheadingText);
 
 container.appendChild(subHeading);
 
+// Italic subheading
 const italicSubheading = document.createElement("p");
 const italicsubheadingText = document
     .createTextNode("These are only primary school students.");
 italicSubheading.appendChild(italicsubheadingText);
+italicSubheading.style.fontStyle = "italic";
 
 container.appendChild(italicSubheading);
 
-
+// List heading
 const listHeading = document.getElementById("list-heading");
-listHeading.classList.add("listheading");
+listHeading.classList.add("list-heading");
 
+// Body
 const body = document.body;
-body.style.backgroundColor = "#f8fcf9";
+Object.assign(body.style, {backgroundColor: "#f8fcf9", padding: "1em"});
+
+// Unordered list
+const ul = document.createElement("ul");
+
+let fewHobbies = [ "Stamps", "Skateboarding", "Skiing", "Drawing animals"];
+for(let i=0; i<fewHobbies.length; i++) {
+    let item = document.createElement("li");
+    let text = document.createTextNode(fewHobbies[i]);
+    item.appendChild(text);
+    ul.appendChild(item);
+}
+body.appendChild(ul);
 
 
-
+// Table
 const students = [
     { id: 1, name: "Peter", gender: "male", grade: 6, hobby: "stamps", age: 14 },
     { id: 2, name: "Mariah", gender: "female", grade: 5, hobby: "stamps", age: 13 },
@@ -51,6 +70,8 @@ function tableHead(table, data) {
         let text = document.createTextNode(key);
         th.appendChild(text);
         row.appendChild(th);
+
+        th.style.textTransform = "uppercase";
     }
 }
 

@@ -7,7 +7,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.listheading {
-  font-style: italic;
+#list-heading {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */

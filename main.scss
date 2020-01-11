@@ -5,10 +5,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // background: green;
     font-family: 'Poppins', sans-serif;
 }
 
-.listheading {
-    font-style: italic;
+#list-heading {
+    text-decoration: underline;
 }
