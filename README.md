@@ -1,3 +1,3 @@
 # Students-DOMPracticeTask
 
-## Aiming to do this task with 90%++ JavaScript
+## Aiming to do this task mostly with JavaScript
